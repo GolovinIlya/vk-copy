@@ -1,0 +1,31 @@
+.navbar {
+    background: #fff;
+    width: 100%;
+    height: 45px;
+}
+
+.container {
+    max-width: 65%;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 25px;
+    &__text {
+        font: var(--font-l);
+        font-weight: 500;
+        color: #000;
+    }
+}
+
+.logo__search {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,15 @@
+.Button {
+    cursor: pointer;
+}
+
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.size-m {
+    font-size: var(--font-size-s);
+    font-weight: 600;
+}

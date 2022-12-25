@@ -1,0 +1,21 @@
+.Search {
+    border: none;
+    background: #edeef0;
+    height: 30px;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 30px;
+    font-size: var(--font-size-m);
+    z-index: 0;
+}
+
+.searchBlock {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 5px;
+}
