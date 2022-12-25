@@ -4,10 +4,14 @@ import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
     CLEAR = "clear",
+    BLUE = "blue",
+    WHITE = "white",
+    GREEN = "green",
 }
 
 export enum ButtonSize {
     M = "size-m",
+    L = "size-l",
 }
 
 interface ButtonProps {

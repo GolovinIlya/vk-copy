@@ -43,5 +43,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    return [typescriptLoader, cssLoader, svgLoader];
+    return [typescriptLoader, cssLoader, svgLoader, fileLoader];
 }
