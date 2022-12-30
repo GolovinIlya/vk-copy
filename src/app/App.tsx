@@ -6,6 +6,7 @@ import { useTheme } from "app/providers/ThemeProvider";
 import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { Navbar } from "widgets/Navbar";
+import { Footer } from "widgets/Footer/ui/Footer";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme();
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path={"/"} element={<MainPage />} />
                     <Route path={"/about"} element={<AboutPage />} />
                 </Routes>
+                <Footer />
             </Suspense>
         </div>
     );

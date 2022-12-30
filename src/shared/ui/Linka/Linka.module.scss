@@ -1,0 +1,14 @@
+.Linka {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underline {
+    font: var(--font-xs);
+    text-decoration: none;
+    color: #346297;
+    &:hover {
+        text-decoration: underline;
+    }
+}

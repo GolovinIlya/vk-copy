@@ -12,11 +12,13 @@ export enum InputTheme {
 interface InputProps {
     size?: string;
     theme?: string;
-    placeholder: string;
+    placeholder?: string;
+    type?: string;
+    id?: string;
 }
 
 export const Input = (props: InputProps) => {
-    const { size, theme, placeholder } = props;
+    const { size, theme, placeholder, type, id } = props;
 
     const mods: Record<string, boolean> = {
         [cls[size]]: true,
@@ -25,6 +27,8 @@ export const Input = (props: InputProps) => {
 
     return (
         <input
+            id={id}
+            type={type}
             className={cn(cls.Input, mods)}
             placeholder={placeholder}
         ></input>
