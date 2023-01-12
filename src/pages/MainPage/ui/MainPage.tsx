@@ -9,19 +9,22 @@ import Logo from "shared/assets/icons/logo-vk.svg";
 import { Input, InputSize, InputTheme } from "shared/ui/Input/Input";
 import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 import { Linka, LinkaTheme } from "shared/ui/Linka/Linka";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
+    const { t } = useTranslation();
+
     return (
         <div className={cls.MainPage}>
             <div className={cls.container}>
                 <div className={cls.mobileStore}>
                     <span className={cls.title}>
-                        ВКонтакте для мобильных устройств
+                        {t("ВКонтакте для мобильных устройств")}
                     </span>
                     <span className={cls.sub_title}>
-                        Установите официальное мобильное приложение ВКонтакте и
-                        оставайтесь в курсе новостей ваших друзей, где бы вы ни
-                        находились.
+                        {t(
+                            "Установите официальное мобильное приложение ВКонтакте и оставайтесь в курсе новостей ваших друзей, где бы вы ни находились."
+                        )}
                     </span>
                     <div className={cls.imageLink}>
                         <a
@@ -68,40 +71,47 @@ const MainPage = () => {
                         theme={LinkaTheme.UNDERLINE}
                         icon={<ArrowIcon />}
                     >
-                        Все продукты
+                        {t("Все продукты")}
                     </Linka>
                 </div>
                 <div className={cls.auth__reg}>
                     <div className={cls.auth}>
                         <Logo />
-                        <span className={cls.title_auth}>Вход ВКонтакте</span>
+                        <span className={cls.title_auth}>
+                            {t("Вход ВКонтакте")}
+                        </span>
                         <Input
                             size={InputSize.L}
                             theme={InputTheme.NORMAL}
-                            placeholder='Телефон или почта'
+                            placeholder={t("Телефон или почта")}
                         />
                         <span className={cn(cls.auth_text, cls.text_one)}>
                             <Input type='checkbox' id='save' />
-                            <label htmlFor='save'>Сохранить вход</label>
+                            <label htmlFor='save'>{t("Сохранить вход")}</label>
                         </span>
                         <Button theme={ButtonTheme.BLUE} size={ButtonSize.L}>
-                            Войти
+                            {t("Войти")}
                         </Button>
-                        <span className={cls.auth_text}>или</span>
+                        <span className={cls.auth_text}>{t("или")}</span>
                         <Button theme={ButtonTheme.WHITE} size={ButtonSize.L}>
-                            QR-код
+                            {t("QR-код")}
                         </Button>
                     </div>
                     <div className={cls.reg}>
                         <Button theme={ButtonTheme.GREEN} size={ButtonSize.L}>
-                            Зарегистрироваться
+                            {t("Зарегистрироваться")}
                         </Button>
                         <span className={cls.auth_text}>
-                            После регистрации вы получите доступ ко всем
-                            возможностям VK ID
+                            {t(
+                                "После регистрации вы получите доступ ко всем возможностям VK ID"
+                            )}
                         </span>
-                        <Linka target='_blank' theme={LinkaTheme.UNDERLINE}>
-                            Узнать больше
+                        <Linka
+                            to='/promo'
+                            target='_blank'
+                            theme={LinkaTheme.UNDERLINE}
+                        >
+                            {t("Узнать больше")}
                         </Linka>
                     </div>
                 </div>
